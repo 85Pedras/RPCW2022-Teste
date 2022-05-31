@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  table
+   tr
+    th Título 
+    th Código 
+    tr 
+     td= dados.titulo
+     td= dados.codigo
+
+  h1 Filhos:
+  if dados.filhos.length > 0
+   table 
+    tr 
+     th Título 
+     th Código 
+     each f in dados.filhos
+      tr 
+       td= f.titulo 
+       td
+        a(href='/classes/' + f.codigo)= f.codigo
+  
+
+  h1 Termos de Índice:
+  if dados.nivel == 3
+   if dados.termosInd.length > 0
+   table 
+    tr 
+     th Título 
+     th Código 
+     each f in dados.termosInd
+      tr 
+       td= f.idTI
+       td= f.termo
+
+
+  p
+   a(href='/') Voltar à Home Page

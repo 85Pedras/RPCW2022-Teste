@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 Termos de Índice
+
+  table
+    tr 
+      th Termo
+      th ID Classe 
+      th Título Classe
+
+    each lis in dados
+      tr 
+        td= lis.termo 
+        td
+         a(href= '/classes/' + lis.idClasse)= lis.idClasse
+        td= lis.tituloClasse

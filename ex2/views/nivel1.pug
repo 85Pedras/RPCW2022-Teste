@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Classes de Primeiro Nível
+
+  table
+   tr
+    th Título 
+    th Código 
+
+   each c in dados 
+    tr 
+     td= c.titulo
+     td
+      a(href='/classes/' + c.codigo)= c.codigo
+
+  p
+   a(href='/') Voltar à Home Page

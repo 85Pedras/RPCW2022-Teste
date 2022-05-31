@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>Teste de RPCW</titulo>
+        <data>31 de maio de 2022</data>
+        <autor>
+            <id>PG47687</id>
+            <nome>Tiago Carvalho Freitas</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <exercicios>
+        <ex1>
+            <dataset>
+                <texto>O dataset fornecido foi divido em dois (cidades e ligações).</texto>
+            </dataset>
+            <persistencia>
+                <texto>No MongoDB foi criada a base de dados 'MAPA2022' com as coleções 'cidades' e 'ligações'.</texto>
+                <comandos>
+                    <c1>mongoimport -d MAPA2022 -c cidades cidades.json --jsonArray</c1>
+                    <c2>mongoimport -d MAPA2022 -c ligacoes ligacoes.json --jsonArray</c2>
+                </comandos>
+            </persistencia>
+            <servidor>
+                <texto>Servidor NodeJS na porta 5000</texto>
+            </servidor>        
+        </ex1>
+        <ex2>
+            <questoes>
+                <q1>18 processos nível 3 ['750.10.001', '750.10.002', '750.10.300', '750.10.600', '750.10.601',
+                                          '750.10.602', '750.20.001', '750.20.002', '750.20.003', '750.20.300', 
+                                          '750.20.301', '750.20.600', '750.20.601', '750.30.001', '750.30.300', 
+                                          '750.30.600', '750.30.601', '750.30.602']</q1>
+                <q2>647 entidades</q2>  
+                <q3>7 processos</q3>
+                <q4>24 processos</q4>
+            </questoes></ex2>
+            <token>
+                <texto>O token de acesso foi obtido a priori a partir do POST em http://clav-api.di.uminho.pt/v2/users/login com as credenciais
+                   (username: "rpcw2022@gmail.com", password="2022") e foi guardado num ficheiro.</texto>
+            </token>
+            <servidor>
+                <texto>Servidor NodeJS na porta 4000</texto>
+            </servidor>
+    </exercicios>
+</doc>
